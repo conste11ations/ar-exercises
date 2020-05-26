@@ -8,8 +8,5 @@ class Store < ActiveRecord::Base
   def must_have_mens_or_womens_apparel
     errors.add(:base, 'Needs to sell at least one of mens or womens apparel') unless mens_apparel? || womens_apparel?
   end
+  
 end
-
-
-#BONUS: Stores must carry at least one of the men's or women's apparel 
-#(hint: use a custom validation method - don't use a Validator class)
