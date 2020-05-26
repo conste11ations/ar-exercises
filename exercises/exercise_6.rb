@@ -8,8 +8,8 @@ require_relative './exercise_5'
 puts "Exercise 6"
 puts "----------"
 
-Store.has_many :employees
-Employee.belongs_to :store
+# Store.has_many :employees
+# Employee.belongs_to :store
 
 @store1.employees.create(
   first_name: "Khurram", 

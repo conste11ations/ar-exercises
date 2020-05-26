@@ -9,4 +9,16 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+p "Say a store name"
+store_name = $stdin.gets.chomp
+
+@store9 = Store.create(
+  name: store_name
+)
+
+p @store9.errors[:mens_apparel]
+
+@store9.errors.each do |attribute, message|
+  print "#{attribute} : "
+  p message
+end
